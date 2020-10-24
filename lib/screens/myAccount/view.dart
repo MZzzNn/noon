@@ -118,14 +118,14 @@ class _MyAccountViewState extends State<MyAccountView> {
                            title:translator.translate('help'),
                            image: 'https://www.flaticon.com/svg/static/icons/svg/271/271823.svg',
                            widget:Container(),
-                           function: (){}
+                           function: ()=>launchHelp(),
                          ),
                          Divider(indent: 10, endIndent: 10,height: 8,),
                          rowCard(
                            title:translator.translate('contact us'),
                            image:'https://www.flaticon.com/svg/static/icons/svg/270/270739.svg' ,
                            widget: Container(),
-                             function: (){}
+                             function: ()=>launchContact(),
                          ),
                        ],
                      ),

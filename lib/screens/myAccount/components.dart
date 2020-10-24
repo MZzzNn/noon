@@ -101,6 +101,22 @@ Widget point(){
     ],
   );
 }
+launchHelp() async {
+  const url = 'https://help.noon.com/hc/en-us';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+launchContact() async {
+  const number = 'tel:16358';
+  if (await canLaunch(number)) {
+    await launch(number);
+  } else {
+    throw 'Could not launch $number';
+  }
+}
 launchFacebook() async {
   const url = 'https://m.facebook.com/noon/';
   if (await canLaunch(url)) {
